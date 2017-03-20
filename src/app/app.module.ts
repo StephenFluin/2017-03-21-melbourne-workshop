@@ -7,6 +7,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AppComponent } from './app.component';
 import { ActivityListComponent } from './activity-list.component';
 import { ActivityViewComponent } from './activity-view.component';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { ActivityViewComponent } from './activity-view.component';
     })
 
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
