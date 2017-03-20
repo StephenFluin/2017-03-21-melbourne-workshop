@@ -1,0 +1,11 @@
+{
+  "rules": {
+    ".read": true,
+    "activities": {
+      ".write": "auth != null"
+    },
+    "queue": {
+      ".write": true
+    }
+  }
+}
