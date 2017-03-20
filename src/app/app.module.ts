@@ -19,11 +19,24 @@ import { ActivityViewComponent } from './activity-view.component';
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      {path: '', component: ActivityListComponent },
-      {path: 'activities/:title', component: ActivityViewComponent },
-      {path: 'about', loadChildren: './about/about.module#AboutModule'},
-      {path: 'submit', loadChildren: './submit/submit.module#SubmitModule'},
+      {
+        path: '',
+        component: ActivityListComponent,
+        data: { title: 'Things To Do' }
+      },
+      { path: 'activities/:title', component: ActivityViewComponent },
+      {
+        path: 'about',
+        loadChildren: './about/about.module#AboutModule',
+        data: { title: 'About This App' }
+      },
+      {
+        path: 'submit',
+        loadChildren: './submit/submit.module#SubmitModule',
+        data: { title: 'Submit a new Activity' }
+      },
     ])
+
   ],
   providers: [],
   bootstrap: [AppComponent]
