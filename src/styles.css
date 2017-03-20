@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+.activity {
+    padding: 16px;
+    margin:16px;
+    border:1px solid #ccc;
+}
+input {
+    display:block;
+}
